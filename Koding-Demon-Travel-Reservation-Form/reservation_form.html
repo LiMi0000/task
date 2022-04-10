@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reservtion Form</title>
+    <style>
+      .box {
+        margin-left: 20%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <h1>Reservation Form</h1>
+      <form class="form">
+        <label>Name</label><br />
+        <input type="text" placeholder="Name" id="name" /><br />
+        <label>Last Name</label><br />
+        <input type="text" placeholder="Last Name" id="lastname" /><br />
+
+        <label>From</label><br />
+        <select name="from">
+          <option value="macedonia" id="macedonia">Skopje</option>
+          <option value="greece" id="greece">Greece</option>
+          <option value="slovenia" id="slovenia">slovenia</option></select
+        ><br /><br />
+        <label>To</label><br />
+        <select name="to">
+          <option value="viena" id="viena">Viena</option>
+          <option value="germany" id="germany">Germany</option>
+          <option value="swiss" id="swiss">Switzerland</option></select
+        ><br /><br />
+        <label>Departure Date</label><br />
+        <input type="date" placeholder="d/m/Y" id="date" /><br /><br />
+        <label>Departure Time</label><br />
+        <select name="to">
+          <option value="11:00" id="11">11:00</option>
+          <option value="12:00" id="12">12:00</option>
+          <option value="13:00" id="13">13:00</option></select
+        ><br /><br />
+
+        <label>Vehicle</label><br />
+        <select name="to">
+          <option value="airplane" id="airplane">Airplane</option>
+          <option value="train" id="train">Train</option></select
+        ><br /><br />
+
+        <label>Zone</label><br />
+        <input type="radio" name="smoke" id="smoke" />Smoke Zone
+        <input type="radio" name="smoke" id="noSmoke" />No Smoke Zone<br /><br />
+
+        <label>Class</label><br />
+        <input type="radio" name="economic" id="economic" />Economic
+        <input type="radio" name="economic" id="business" />Business<br /><br />
+
+        <label>Service</label><br />
+        <input type="radio" name="drinks" id="drinks" />Drinks
+        <input type="radio" name="drinks" id="coffee" />Coffee
+        <input type="radio" name="drinks" id="breakfast" />Breakfast<br /><br />
+
+        <button type="submit" value="submit">Confirm Reservation</button>
+      </form>
+    </div>
+    <script>
+      var nameInput = document.getElementById('name');
+      var lastName = document.getElementById('lastname');
+      var macedonia = document.getElementById('macedonia');
+      var greece = document.getElementById('greece');
+      var slovenia = document.getElementById('slovenia');
+      var vienna = document.getElementById('viena');
+      var germany = document.getElementById('germany');
+      var swiss = document.getElementById('swiss');
+      var date = document.getElementById('date');
+      var time1 = document.getElementById('11');
+      var time2 = document.getElementById('12');
+      var time3 = document.getElementById('13');
+
+      var smoke = document.getElementById('smoke');
+      var noSmoke = document.getElementById('noSmoke');
+      var economic = document.getElementById('economic');
+      var business = document.getElementById('business');
+      var drinks = document.getElementById('drinks');
+      var coffee = document.getElementById('coffee');
+      var breakfast = document.getElementById('breakfast');
+
+      document.querySelector('form').addEventListener('submit', function (e) {
+        //prevent the normal submission of the form
+        e.preventDefault();
+
+        console.log(`NAME: ${nameInput.value}`);
+        console.log(`EMAIL: ${lastName.value}`);
+        console.log(`MACEDONIA: ${macedonia.value}`);
+        console.log(`GREECE: ${greece.value}`);
+        console.log(`SLOVENIA: ${slovenia.value}`);
+        console.log(`VIENA: ${vienna.value}`);
+        console.log(`GERMANY: ${germany.value}`);
+        console.log(`SWISS: ${swiss.value}`);
+        console.log(`DATE: ${date.value}`);
+        console.log(`TIME1 ${time1.value}`);
+        console.log(`TIME2: ${time2.value}`);
+        console.log(`TIME3: ${time3.value}`);
+
+        console.log(`smoke: ${smoke.value}`);
+        console.log(`noSmoke: ${noSmoke.value}`);
+        console.log(`economic: ${economic.value}`);
+        console.log(`business: ${business.value}`);
+        console.log(`drinks: ${drinks.value}`);
+        console.log(`coffee: ${coffee.value}`);
+        console.log(`breakfast: ${breakfast.value}`);
+      });
+    </script>
+  </body>
+</html>
